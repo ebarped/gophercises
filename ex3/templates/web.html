@@ -1,0 +1,13 @@
+<html>
+    <head>
+        <title>Choose Your Own Story</title>
+    </head>
+    <body>
+        <h1>Chapter: {{.Title}}</h1>
+        <b>Story</b>: {{range .Story}}<p>{{.}}</p>{{end}}
+        {{if .Options}} 
+        <b>Options</b>: {{range .Options}}<p>{{.Text}} --> <a href="/?chapter={{.Arc}}" >Go!</a>
+        </p>{{end}}
+        {{end}}
+    </body>
+</html>
