@@ -36,3 +36,7 @@ func NormalizeNumber(p Phone) Phone {
 
 	return Phone{Id: p.Id, Number: result}
 }
+
+func (p Phone) String() string {
+	return p.Number
+}
